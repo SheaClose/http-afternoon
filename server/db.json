@@ -166,16 +166,6 @@
       "text": "Earlier this year, on or around the 5th of april, as I was lying on my bed listening to my favorite podcast series, a strange, dark feeling began to come over me.\nThis was not something I had experienced before, but somehow I knew what it meant. It felt like a demon, from the very depths of my stomach were awaking after years - NAY - centuries of slumber! An unbearably intense desire began to enter my soul, and a single thought was dominating my mind...\n\n'NO!', I thought! 'I cannot stoop so low! I must resist!' This was the singular defense I had available to me. But alas, I was weak. I began to reach for my keys. Out the door I went, into the car, and off to where there was no return.\n\nWith my destination in sight, I began to rethink my entire existence.\n\nThere in the drive-thru line I waited patiently, slowing moving forward to my demise. Just then, the voice of the Devil himself echoed through the speakers... 'Welcome to Taco Bell...'\n\nI knew my life was over...\n\nThe end"
     },
     {
-      "id": 17,
-      "name": "Bryan Smith",
-      "userID": 10,
-      "image": "https://static1.squarespace.com/static/58680ce2d1758e371522bf7f/5868b4695016e16d593b7a3d/58db1d895016e15e289c9b3d/1490759681172/Opa.JPG?format=2500w",
-      "title": "It's just code, Bro",
-      "subTitle": "An Ode to Code",
-      "text": "'Hello, world!' The students would type, Learning to code both day and night.\n\n for loops, if statements, React and const, learning this stuff might take you several months. \n\n Lucky for you, DevMountain is here. Lets change that career path for this is your year! \n\n You'll decide between Atom, Sublime and VSCode while we take you down this road we know as Node. \n\n content, padding, border and margin? Join us as we plant the seeds to a beautiful CSS garden. \n\n Off you go, forming opinions. PC or Mac? Tabs or spaces? quotes or string interpolation? \n\n Look at you now, the Jr Dev. So much has crammed into your head.\n\n\n return.",
-      "featured": true
-    },
-    {
       "id": 18,
       "name": "Sperry the Dog",
       "userID": 11,
@@ -206,30 +196,28 @@
       "featured": false
     },
     {
-      "id": 21,
-      "name": "Andi Platter",
-      "userID": 8,
-      "image": "https://cdn-media-2.lifehack.org/wp-content/files/2017/05/24045853/ariel_facepalm_at_scuttle_s_singing_by_arielfan90-daw1w7r.gif",
-      "title": "What is in my pants?!",
-      "subTitle": "A short embarrassing story",
-      "text": "HA okay, so this is a story all about how I embarrassed myself at camp bow wow. Wish I could make that song last for this whole story but no. So I worked at a doggie daycare called camp bow wow a few years ago. There was a guy who worked there as well and he was attractive. \n\n We usually traded shifts so when I came in he was finishing his shift. I had just done my laundry and I pulled my pants out of the dryer and put them on and went to work. When I got there cute boy was about to leave and we chatted for a bit before he did. I went to the back to help out and I touched the back of my leg.\n\n\n. \"OH MY GOSH WHAT IS IN MY PANTS?! I just talked to cute boy for like 10 minutes with a lump on my leg!\" I was so embarrassed and a little concerned. I've never had a tennis ball sized lump on my leg before. Worried I ran to the bathroom and found what was causing this lump... it was a freaking sock. \n\n\n\n How did I not notice there was a balled up sock in my pants? Still not sure, still embarrassed. The End",
-      "featured": true
-    },
-    {
       "title": "Testing",
       "subTitle": "provo",
       "image": "https://unsplash.it/700/400",
       "text": "dasj;lfksjfl;aksdjflaskj",
       "id": 22
+    },
+    {
+      "title": "This is just a test",
+      "subTitle": "Nothing to see here, just a test.",
+      "image": "https://s3-us-west-2.amazonaws.com/dogcompany/12years.JPG",
+      "text": "sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "id": 23
+    },
+    {
+      "title": "test numero dos",
+      "subTitle": "lalal",
+      "image": "https://s3-us-west-2.amazonaws.com/dogcompany/12years.JPG",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "id": 24
     }
   ],
   "users": [
-    {
-      "id": 0,
-      "name": "Andrew Garvin",
-      "img": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAsQAAAAJGU2NzdkMjliLTdkNzgtNGE4Zi1iZjliLWIzNGViOTQxNTg1ZA.jpg",
-      "desc": "I’m all about that bass… And by bass I mean I’m just super cool, ya know? Specialities include Dad Jokes, Programming, Wakeboarding, and other st00f"
-    },
     {
       "id": 1,
       "name": "Emily Keator",
@@ -301,6 +289,12 @@
       "name": "Leo",
       "img": "https://unsplash.it/300/?random",
       "desc": "I'm not real. I'm just a pseudonym of a guy that doesn't like waiting for fast food workers to figure out how to spell his name."
+    },
+    {
+      "name": "Shea",
+      "img": "https://s3-us-west-2.amazonaws.com/dogcompany/DogCoLogo.png",
+      "desc": "connect the dots... lalala",
+      "id": 13
     }
   ]
 }

@@ -1,44 +1,60 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import BlogTile from './subcomponents/BlogTile';
 
 // import axios
 
-class User extends Component{
-    constructor(){
-        super()
+class User extends Component {
+  constructor() {
+    super();
 
-        this.state={
-            user: {},
-            posts: []
-        }
-    }
+    this.state = {
+      user: {},
+      posts: []
+    };
+  }
 
-    // insert componentWillMount
-    
+  componentWillMount() {
+    const promises = [
+      axios.get(`/api/users/${this.props.match.params.id}`),
+      axios.get(`/api/blogs/user/${this.props.match.params.id}`)
+    ];
+    axios.all(promises).then(
+      axios.spread((users, blogs) => {
+        const posts = blogs.data ? blogs.data : [];
+        const user = users.data ? users.data : {};
+        this.setState({ user, posts });
+      })
+    );
+  }
 
-    render(){
-        const user = this.state.user
-        const posts = this.state.posts.map((c,i)=><BlogTile key={i} blog={c}/>)
-        return (
-            <div className='content'>
-                <div className="profile">
-                        {user.img ? <img src={user.img} alt="profile pic"/> :<img src={'https://unsplash.it/300/?random'} alt="profile pic"/>}
-                        <span>
-                            <h1>{user.name}</h1>
-                            <p>{user.desc}</p>
-                            <Link to={`/user/${user.id}/edit`}>
-                                <button className="edit-user">Edit User</button>
-                            </Link>
-                        </span>
-                </div>
-                <div className="post-list">
-                    <h2>Posts by User:</h2>
-                    {posts.length? posts : <p>No Blog Posts from this User</p>}
-                </div>
-            </div>
-        )
-    }
+  render() {
+    const { user } = this.state;
+    const posts = this.state.posts.map((c, i) => <BlogTile key={i} blog={c} />);
+    return (
+      <div className="content">
+        <div className="profile">
+          {user.img ? (
+            <img src={user.img} alt="profile pic" />
+          ) : (
+            <img src={'https://unsplash.it/300/?random'} alt="profile pic" />
+          )}
+          <span>
+            <h1>{user.name}</h1>
+            <p>{user.desc}</p>
+            <Link to={`/user/${user.id}/edit`}>
+              <button className="edit-user">Edit User</button>
+            </Link>
+          </span>
+        </div>
+        <div className="post-list">
+          <h2>Posts by User:</h2>
+          {posts.length ? posts : <p>No Blog Posts from this User</p>}
+        </div>
+      </div>
+    );
+  }
 }
 
-export default User
+export default User;

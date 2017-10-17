@@ -1,36 +1,45 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
 import Hero from './subcomponents/Hero';
 import BlogThumb from './subcomponents/BlogThumb';
 
-// import axios
+class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      index: 0,
+      posts: [
+        { title: 'Loading...', image: 'https://unsplash.it/900/400/?random' }
+      ]
+    };
+  }
 
-class Home extends Component{
-    constructor(){
-        super();
-        this.state = {
-            index: 0,
-            posts: [{title: "Loading...",image: 'https://unsplash.it/900/400/?random'}]
-        }
-    }
+  componentWillMount() {
+    axios
+      .get('/api/featured')
+      .then(response => {
+        this.setState({
+          posts: response.data,
+          index: ~~(Math.random() * response.data.length) + 0
+        });
+      })
+      .catch(console.log);
+  }
 
-    // insert componentWillMount:
-    
+  render() {
+    const posts = this.state.posts.map((post, i) => {
+      return <BlogThumb blog={post} key={i} />;
+    });
 
-    render(){
-        // map over your recommended blogs here, replace null.
-        const posts = null
-
-        return(
-            <div className="content" >
-                <Hero blog={this.state.posts[this.state.index]} />
-                <hr/>
-                <div className="blog-grid">
-                    {/* put your mapped blogs here */}
-                    {posts}
-                </div>
-            </div>
-        )
-    }
+    return (
+      <div className="content">
+        <Hero blog={this.state.posts[this.state.index]} />
+        <hr />
+        <div className="blog-grid">{posts}</div>
+      </div>
+    );
+  }
 }
 
 export default Home;
